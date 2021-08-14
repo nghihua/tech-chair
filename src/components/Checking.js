@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import { firestore } from "../firebase";
 
-const Checking = ({ userName, mode, callId, setPage }) => {
+const Checking = ({ description, mode, callId, setPage }) => {
 
     const [checkMessage, setCheckMessage] = useState("Đang kiểm tra...");
 
@@ -23,6 +23,7 @@ const Checking = ({ userName, mode, callId, setPage }) => {
             }, 3000);
         }
         else {
+            console.log(`here: ${callData.answer == undefined}`);
             setPage("join");
         }
     }

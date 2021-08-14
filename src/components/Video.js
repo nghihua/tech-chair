@@ -21,7 +21,7 @@ const servers = {
 
 const pc = new RTCPeerConnection(servers);
 
-function Videos({ userName, mode, callId, setPage }) {
+function Videos({ description, mode, callId, setPage }) {
     const [webcamActive, setWebcamActive] = useState(false);
     const [roomId, setRoomId] = useState(callId);
 
@@ -71,7 +71,8 @@ function Videos({ userName, mode, callId, setPage }) {
             };
 
 
-            await callDoc.set({ offer });
+            await callDoc.set({ offer, description });
+
 
             callDoc.onSnapshot((snapshot) => {
                 const data = snapshot.data();

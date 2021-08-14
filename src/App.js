@@ -10,14 +10,14 @@ import Checking from "./components/Checking";
 function App() {
     const [currentPage, setCurrentPage] = useState("home");
     const [joinCode, setJoinCode] = useState("");
-    const [userName, setUserName] = useState("");
+    const [description, setDescription] = useState("");
 
     return (
         <div className="app">
             {currentPage==="home" && 
                 <Menu
-                    userName={userName}
-                    setUserName={setUserName}
+                    description={description}
+                    setDescription={setDescription}
                     joinCode={joinCode}
                     setJoinCode={setJoinCode}
                     setPage={setCurrentPage}
@@ -25,7 +25,7 @@ function App() {
             }
             {currentPage==="checking" && 
                 <Checking
-                    userName={userName}
+                    description={description}
                     mode={currentPage}
                     callId={joinCode}
                     setPage={setCurrentPage}
@@ -33,7 +33,7 @@ function App() {
             }
             {((currentPage==="create") || (currentPage==="join")) && 
                 <Videos
-                    userName={userName}
+                    description={description}
                     mode={currentPage}
                     callId={joinCode}
                     setPage={setCurrentPage}

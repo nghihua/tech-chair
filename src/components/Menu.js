@@ -1,12 +1,13 @@
-function Menu({ userName, setUserName, joinCode, setJoinCode, setPage }) {
+function Menu({ description, setDescription, joinCode, setJoinCode, setPage }) {
 
     return (
         <div className="home">
             <div className="create box">
+            <h3>Bạn gặp vấn đề gì?</h3>
                 <input
-                    value={userName}
-                    onChange={(e) => setUserName(e.target.value)}
-                    placeholder="Enter name"
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
+                    placeholder="Miêu tả vấn đề"
                 />
                 <button onClick={() => setPage("create")}>Create Call</button>
             </div>
@@ -16,11 +17,6 @@ function Menu({ userName, setUserName, joinCode, setJoinCode, setPage }) {
                     value={joinCode}
                     onChange={(e) => setJoinCode(e.target.value)}
                     placeholder="Join with code"
-                />
-                <input
-                    value={userName}
-                    onChange={(e) => setUserName(e.target.value)}
-                    placeholder="Enter name"
                 />
                 <button onClick={() => {setPage("checking")}}>Answer</button>
             </div>
