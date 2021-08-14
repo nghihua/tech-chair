@@ -5,6 +5,7 @@ import "./App.css";
 import Menu from './components/Menu';
 import Videos from './components/Video';
 import Checking from "./components/Checking";
+import Feedback from "./components/Feedback";
 
 
 function App() {
@@ -36,6 +37,11 @@ function App() {
                     description={description}
                     mode={currentPage}
                     callId={joinCode}
+                    setPage={setCurrentPage}
+                />
+            }
+            {currentPage==="feedback" && 
+                <Feedback
                     setPage={setCurrentPage}
                 />
             }

@@ -166,7 +166,7 @@ function Videos({ description, mode, callId, setPage }) {
             await roomRef.delete();
         }
 
-        window.location.reload();
+        setPage("feedback");
     };
 
     return (
