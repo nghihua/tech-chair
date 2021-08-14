@@ -1,11 +1,8 @@
 const NavBar = () => {
     return (
-        <nav className="navbar">
+        <div className="navbar">
             <h1>TechChair</h1>
-            <div>
-                <a>Tôi là tình nguyện viên</a>
-            </div>
-        </nav>
+        </div>
     );
 }
 
