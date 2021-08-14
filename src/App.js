@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Menu from './components/Menu';
 import Videos from './components/Video';
-import Checking from "./Checking";
+import Checking from "./components/Checking";
 
 
 function App() {
