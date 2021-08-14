@@ -5,6 +5,8 @@ import Menu from './components/Menu';
 import Videos from './components/Video';
 import Checking from "./components/Checking";
 import AvailableCalls from "./components/AvailableCalls";
+import Feedback from "./components/Feedback";
+
 
 
 function App() {
@@ -44,6 +46,9 @@ function App() {
                     setJoinCode={setJoinCode}
                     setPage={setCurrentPage}
                     currentPage={currentPage}
+            {currentPage==="feedback" && 
+                <Feedback
+                    setPage={setCurrentPage}
                 />
             }
         </div>
