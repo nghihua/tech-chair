@@ -193,12 +193,20 @@ function Videos({ description, mode, callId, setPage }) {
                     <MoreIcon />
                     <div className="popover">
                         <button
-                            className = "copy-button"
+                            className = "responsive-button"
                             onClick={() => {
                                 navigator.clipboard.writeText(roomId);
                             }}>
+                                <CopyIcon />
                                 Copy Mã Phòng
-                            </button>
+                        </button>
+                        <button
+                            className = "responsive-button"
+                            onClick={() => {
+                                console.log("Report user");
+                            }}>
+                                Báo cáo
+                        </button>
                     </div>
                 </div>
             </div>
