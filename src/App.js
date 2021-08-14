@@ -2,8 +2,8 @@ import { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./App.css";
-import Menu from './Menu';
-import Videos from './Video';
+import Menu from './components/Menu';
+import Videos from './components/Video';
 
 
 function App() {
