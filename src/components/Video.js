@@ -195,8 +195,9 @@ function Videos({ userName, mode, callId, setPage }) {
                             className = "copy-button"
                             onClick={() => {
                                 navigator.clipboard.writeText(roomId);
-                            }}
-                            value="Copy mã phòng"/>
+                            }}>
+                                Copy Code
+                            </button>
                     </div>
                 </div>
             </div>
