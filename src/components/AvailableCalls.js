@@ -42,15 +42,18 @@ function AvailableCalls ({ setPage, setJoinCode, currentPage}) {
                 <NavBar />
             </div>
             <div className="bottom">
-                {calls.length===0 ? 
-                    <h3>Hiện tại chưa có người cần hỗ trợ. Xin hãy quay lại sau...</h3> :
-                    calls.map(call => (
+                    {calls.length===0 ? 
                         <div className="box">
-                            <h3>{call.description}</h3>
-                            <button onClick={() => {setJoinCode(call.id);setPage("checking")}}>Hỗ trợ</button>
-                        </div>
-                    ))
-                }
+                            <h3>Hiện tại chưa có người cần hỗ trợ. Xin hãy quay lại sau...</h3>
+                        </div> :
+                        calls.map((call, index) => (
+                            <div className="box">
+                                <h3>{(call.description=="") && "Không có thông tin"}</h3>
+                                <h3>{(call.description!="") && call.description}</h3>
+                                <button onClick={() => {setJoinCode(call.id);setPage("checking")}}>Phòng {index+1}</button>
+                            </div>
+                        ))
+                    }
             </div>
             
         </div>

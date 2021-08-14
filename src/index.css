@@ -13,9 +13,9 @@
 }
 
 :root {
-    --color-primary: #4485ff;
+    --color-primary: #020202;
     --color-primary-light: #D6E4FF;
-    --background: #FEF9EF;
+    --background: #faf6ef;
 }
 
 
@@ -221,8 +221,8 @@ video {
 /* Menu */
 
 .home .bottom {
-  background-image: url("https://images.pexels.com/photos/251225/pexels-photo-251225.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-    height: 100vh;
+  background-image: url("https://images.pexels.com/photos/326504/pexels-photo-326504.jpeg");
+  background-size: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 10vw;
@@ -239,6 +239,8 @@ video {
     color: var(--color-primary);
     border-radius: 8px;
     padding: 40px 20px;
+    opacity: 0.8;
+    z-index: 0;
 }
 
 .home .top {
@@ -260,6 +262,7 @@ video {
     margin-bottom: 50px;
     height: 120px;
     border-bottom: 1px solid #f2f2f2;
+    z-index: 1000;
   }
   .navbar h1 {
     font-family: "Lato";
@@ -276,11 +279,11 @@ video {
     border-left: 1px solid;
   }
   .navbar a:hover {
-    color: var(--color-primary);
+    color: gray;
   }
 
   .navbar .logo {
-    border-radius: 30px;
+    border-radius: 50%;
   }
 
 /* feedback */
@@ -401,3 +404,27 @@ video {
 #rating-3:checked ~ .emoji-wrapper > .emoji { transform: translateY(-300px); }
 #rating-4:checked ~ .emoji-wrapper > .emoji { transform: translateY(-400px); }
 #rating-5:checked ~ .emoji-wrapper > .emoji { transform: translateY(-500px); }
+
+/* Available Calls */
+
+.call-box {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    margin-top: 40px;
+    background-color: rgba(254, 249, 239, 0.95);
+    color: var(--color-primary);
+    border-radius: 8px;
+    padding: 40px 20px;
+}
+
+.call {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.description {
+  margin-bottom: auto;
+}
