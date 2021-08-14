@@ -23,7 +23,6 @@ const Checking = ({ description, mode, callId, setPage }) => {
             }, 3000);
         }
         else {
-            console.log(`here: ${callData.answer == undefined}`);
             setPage("join");
         }
     }

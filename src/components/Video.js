@@ -4,7 +4,7 @@ import { firestore } from "../firebase";
 
 import { ReactComponent as HangupIcon } from "../icons/hangup.svg";
 import { ReactComponent as MoreIcon } from "../icons/more-vertical.svg";
-import { ReactComponent as CopyIcon } from "../icons/copy.svg";
+import { ReactComponent as CopyIcon } from "../icons/copy.svg"
 
 // Initialize WebRTC
 const servers = {
@@ -168,6 +168,31 @@ function Videos({ description, mode, callId, setPage }) {
 
         setPage("feedback");
     };
+    window.addEventListener("beforeunload", (ev) => {  
+        ev.preventDefault();
+        alert("Cuộc gọi bị buộc dừng");
+        if (roomId) {
+            let roomRef = firestore.collection("calls").doc(roomId);
+            roomRef
+                .collection("answerCandidates")
+                .get()
+                .then((querySnapshot) => {
+                    querySnapshot.forEach((doc) => {
+                        doc.ref.delete();
+                    });
+                });
+            roomRef
+                .collection("offerCandidates")
+                .get()
+                .then((querySnapshot) => {
+                    querySnapshot.forEach((doc) => {
+                        doc.ref.delete();
+                    });
+                });
+
+            roomRef.delete();
+        }
+    });
 
     return (
         <div className="videos">
