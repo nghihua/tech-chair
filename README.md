@@ -1,16 +1,12 @@
-# Video Chat with WebRTC, React, and Firebase.
+# Tech Chair
 
-A 1-to-1 video chat webpage built with WebRTC, React and Firestore.
+## Giới thiệu
 
-## Usage
+Tech Chair là nơi cung cấp tech support miễn phí cho mọi người, đặc biệt là các đối tượng gặp khó khăn trong việc tiếp cận và sử dụng công nghệ.
 
-Update the Firebase project config in the `src/App.js` file.
+## Tính năng
 
-```
-git clone https://github.com/raymon-zhang/webrtc-react-videochat.git
-cd ./webrtc-react-videochat/
-
-npm install
-
-npm start
-```
+- Tìm trợ giúp: Miêu tả vấn đề và gọi 1:1 với tình nguyện viên
+- Báo cáo: Báo cáo người dùng sử dụng nền tảng vì mục đích xấu (in development)
+- Feedback: Review tình nguyện viên sau mỗi cuộc gọi (in development)
+- Đăng nhập/Đăng ký: Nhanh chóng trở thành tình nguyện viên sau khi ban quản trị review đơn đăng ký (in development)
