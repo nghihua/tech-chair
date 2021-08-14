@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import firebase from "firebase/app";
 import "firebase/firestore";
 
@@ -17,36 +18,27 @@ if (!firebase.apps.length) {
 
 const firestore = firebase.firestore();
 
-const servers = {
-    iceServers: [
-        {
-            urls: [
-                "stun:stun1.l.google.com:19302",
-                "stun:stun2.l.google.com:19302",
-            ],
-        },
-    ],
-    iceCandidatePoolSize: 10,
-};
-
-const pc = new RTCPeerConnection(servers);
-
 const Checking = ({ userName, mode, callId, setPage }) => {
+
+    const [checkMessage, setCheckMessage] = useState("Đang kiểm tra...");
+
+    useEffect(()=> {
+        console.log("Check done.");
+    }, [checkMessage]);
 
     const checkFull = async () => {
         const callDoc = firestore.collection("calls").doc(callId);
 
         const callData = (await callDoc.get()).data();
 
-        console.log(`This is callData: ${callData}`);
-
         if (callData.answer) {
             console.log(callData.answer);
-            alert("This room is full!");
-            setPage("home");
+            setCheckMessage("Phòng đã có người. Quay về trang chủ...");
+            setTimeout(()=> {
+                setPage("home");
+            }, 2000);
         }
         else {
-            console.log("This room is clear");
             setPage("join");
         }
     }
@@ -59,8 +51,10 @@ const Checking = ({ userName, mode, callId, setPage }) => {
             checkFull();
         }
         else {
-            alert("Code is invalid! Redirect to home...");
-            setPage("home");
+            setCheckMessage("Mã gọi không hợp lệ. Quay về trang chủ...");
+            setTimeout(()=> {
+                setPage("home");
+            }, 2000);
         }
     }
 
@@ -68,7 +62,7 @@ const Checking = ({ userName, mode, callId, setPage }) => {
 
     return (
         <div className="checking">
-            <p>Checking...</p>
+            <p>{checkMessage}</p>
         </div>
     );
 }
