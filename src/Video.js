@@ -122,6 +122,7 @@ function Videos({ userName, mode, callId, setPage }) {
 
             const callData = (await callDoc.get()).data();
 
+            console.log(`This is callData: ${callData}`);
             console.log(callData.answer);
 
             const offerDescription = callData.offer;

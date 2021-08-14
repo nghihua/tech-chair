@@ -2,6 +2,7 @@ import { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./App.css";
+import Checking from "./Checking";
 import Menu from './Menu';
 import Videos from './Video';
 
@@ -13,7 +14,7 @@ function App() {
 
     return (
         <div className="app">
-            {currentPage === "home" ? (
+            {currentPage==="home" && 
                 <Menu
                     userName={userName}
                     setUserName={setUserName}
@@ -21,14 +22,23 @@ function App() {
                     setJoinCode={setJoinCode}
                     setPage={setCurrentPage}
                 />
-            ) : (
+            }
+            {currentPage==="checking" && 
+                <Checking
+                    userName={userName}
+                    mode={currentPage}
+                    callId={joinCode}
+                    setPage={setCurrentPage}
+                />
+            }
+            {((currentPage==="create") || (currentPage==="join")) && 
                 <Videos
                     userName={userName}
                     mode={currentPage}
                     callId={joinCode}
                     setPage={setCurrentPage}
                 />
-            )}
+            }
         </div>
     );
 }

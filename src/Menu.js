@@ -2,26 +2,6 @@ import { useState } from "react";
 
 function Menu({ userName, setUserName, joinCode, setJoinCode, setPage }) {
 
-    // const joinWithCode = (code) => {
-    //     let found = occupiedRooms.find((room) => room===code);
-    //     if (found) {
-    //         let full = fullRooms.find((room) => room===code);
-    //         if (full) {
-    //             alert("Room is full. Please try again");
-    //         }
-    //         else {
-    //             let temp = fullRooms;
-    //             temp.push(code);
-    //             setFullRooms(temp);
-    //             setPage("join");
-    //         }
-    //     }
-    //     else {
-    //         alert(`Occupied rooms are ${occupiedRooms}.`);
-    //         alert("Code doesn't exist. Please try again.");
-    //     }
-    // }
-
     return (
         <div className="home">
             <div className="create box">
@@ -44,7 +24,7 @@ function Menu({ userName, setUserName, joinCode, setJoinCode, setPage }) {
                     onChange={(e) => setUserName(e.target.value)}
                     placeholder="Enter name"
                 />
-                <button onClick={() => {setPage("join")}}>Answer</button>
+                <button onClick={() => {setPage("checking")}}>Answer</button>
             </div>
         </div>
     );
