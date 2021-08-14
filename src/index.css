@@ -246,6 +246,7 @@ video {
     border-bottom: 1px solid black;
   }
   .navbar h1 {
+      margin-left: 8px;
     font-size: 30pt;
     color: var(--color-primary);
   }
@@ -253,9 +254,13 @@ video {
     margin-left: auto;
   }
   .navbar a {
-    text-decoration: none;
+    margin-left: 40px;
     padding: 6px;
   }
   .navbar a:hover {
     color: var(--color-primary);
+  }
+
+  .navbar .logo {
+    border-radius: 30px;
   }
