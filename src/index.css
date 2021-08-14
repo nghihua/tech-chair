@@ -1,17 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Niramit:wght@200&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Niramit:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Niramit:wght@200&family=Varta:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Niramit:wght@200&family=Roboto:wght@300&display=swap');
+
 * {
     box-sizing: border-box;
 }
 
 :root {
     --color-primary: #4485ff;
-    --color-primary-light: #ebf5ff;
+    --color-primary-light: #D6E4FF;
 }
 
+
 body {
+  background-color: #FEF9EF;
+    font-size: 18pt;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-        "Helvetica Neue", sans-serif;
+    font-family: "Roboto";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -29,7 +40,7 @@ button {
 
 input {
     border: none;
-    font-family: inherit;
+    font: inherit;
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 50px;
@@ -247,6 +258,7 @@ video {
     border-bottom: 1px solid black;
   }
   .navbar h1 {
+    font-family: "Lato";
       margin-left: 8px;
     font-size: 30pt;
     color: var(--color-primary);
@@ -257,6 +269,7 @@ video {
   .navbar a {
     margin-left: 40px;
     padding: 6px;
+    border-left: 1px solid;
   }
   .navbar a:hover {
     color: var(--color-primary);

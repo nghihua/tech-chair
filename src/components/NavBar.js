@@ -4,7 +4,7 @@ const NavBar = () => {
     return (
         <nav className="navbar">
             <img src={TechChairIcon} width="55px" className="logo"/>
-            <h1>TechChair</h1>
+            <h1>Tech Chair</h1>
             <div className="options">
                 <a>Đăng nhập</a>
             </div>
