@@ -4,6 +4,7 @@ import { firestore } from "../firebase";
 
 import { ReactComponent as HangupIcon } from "../icons/hangup.svg";
 import { ReactComponent as MoreIcon } from "../icons/more-vertical.svg";
+import { ReactComponent as CopyIcon } from "../icons/copy.svg"
 
 // Initialize WebRTC
 const servers = {

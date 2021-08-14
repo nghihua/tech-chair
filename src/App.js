@@ -46,6 +46,8 @@ function App() {
                     setJoinCode={setJoinCode}
                     setPage={setCurrentPage}
                     currentPage={currentPage}
+                />
+            }
             {currentPage==="feedback" && 
                 <Feedback
                     setPage={setCurrentPage}
