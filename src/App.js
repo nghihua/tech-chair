@@ -2,9 +2,9 @@ import { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./App.css";
-import Checking from "./Checking";
-import Menu from './Menu';
-import Videos from './Video';
+import Menu from './components/Menu';
+import Videos from './components/Video';
+import Checking from "./components/Checking";
 
 
 function App() {

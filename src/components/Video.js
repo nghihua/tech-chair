@@ -1,27 +1,10 @@
 import { useRef, useState } from "react";
 
-import firebase from "firebase/app";
-import "firebase/firestore";
+import { firestore } from "../firebase";
 
-import { ReactComponent as HangupIcon } from "./icons/hangup.svg";
-import { ReactComponent as MoreIcon } from "./icons/more-vertical.svg";
-import { ReactComponent as CopyIcon } from "./icons/copy.svg";
-
-const firebaseConfig = {
-    apiKey: "AIzaSyBPrBm90jw5hRzy-vPSkVOh-9awfRBs8XY",
-    authDomain: "video-chat-777a9.firebaseapp.com",
-    projectId: "video-chat-777a9",
-    storageBucket: "video-chat-777a9.appspot.com",
-    messagingSenderId: "721083740041",
-    appId: "1:721083740041:web:036e2169a8012571443b58",
-    measurementId: "G-9XM15HPTRM"
-};
-
-if (!firebase.apps.length) {
-    firebase.initializeApp(firebaseConfig);
-}
-
-const firestore = firebase.firestore();
+import { ReactComponent as HangupIcon } from "../icons/hangup.svg";
+import { ReactComponent as MoreIcon } from "../icons/more-vertical.svg";
+import { ReactComponent as CopyIcon } from "../icons/copy.svg";
 
 // Initialize WebRTC
 const servers = {
