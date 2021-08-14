@@ -209,12 +209,11 @@ function Videos({ userName, mode, callId, setPage }) {
                     <MoreIcon />
                     <div className="popover">
                         <button
+                            className = "copy-button"
                             onClick={() => {
                                 navigator.clipboard.writeText(roomId);
                             }}
-                        >
-                            <CopyIcon /> Copy joining code
-                        </button>
+                            value="Copy mã phòng"/>
                     </div>
                 </div>
             </div>

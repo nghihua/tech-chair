@@ -9,3 +9,12 @@
 
   font-size: 30pt;
 }
+
+.copy-button:active {
+  background-color: aquamarine;
+  height: 50px;
+}
+
+.pop-over {
+  
+}
