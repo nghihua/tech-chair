@@ -190,12 +190,12 @@ video {
   
 .copy-button {
     position: relative;
-    background-color: cornflowerblue;
-    border: none;
-    font-size: 20px;
+    background-color: white;
+    border: 0.25px solid black;
+    font-size: 18px;
     color: black;
     padding: 20px;
-    width: 150px;
+    width: 200px;
     text-align: center;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
@@ -206,7 +206,7 @@ video {
   
 .copy-button:after {
     content: "";
-    background: darkcyan;
+    background: cadetblue;
     display: block;
     position: absolute;
     padding-top: 300%;

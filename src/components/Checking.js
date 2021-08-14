@@ -17,10 +17,10 @@ const Checking = ({ userName, mode, callId, setPage }) => {
 
         if (callData.answer) {
             console.log(callData.answer);
-            setCheckMessage("Phòng đã có người. Quay về trang chủ...");
+            setCheckMessage("Phòng đã có volunteer giúp rồi (⌒▽⌒)☆. Quay về trang chủ...");
             setTimeout(()=> {
                 setPage("home");
-            }, 2000);
+            }, 3000);
         }
         else {
             setPage("join");
@@ -35,10 +35,10 @@ const Checking = ({ userName, mode, callId, setPage }) => {
             checkFull();
         }
         else {
-            setCheckMessage("Mã gọi không hợp lệ. Quay về trang chủ...");
+            setCheckMessage("Mã gọi không hợp lệ (╥﹏╥). Quay về trang chủ...");
             setTimeout(()=> {
                 setPage("home");
-            }, 2000);
+            }, 3000);
         }
     }
 

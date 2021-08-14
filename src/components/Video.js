@@ -196,7 +196,7 @@ function Videos({ userName, mode, callId, setPage }) {
                             onClick={() => {
                                 navigator.clipboard.writeText(roomId);
                             }}>
-                                Copy Code
+                                Copy Mã Phòng
                             </button>
                     </div>
                 </div>
@@ -206,17 +206,16 @@ function Videos({ userName, mode, callId, setPage }) {
                 <div className="modalContainer">
                     <div className="modal">
                         <h3>
-                            Turn on your camera and microphone and start the
-                            call
+                        Mở camera và mic để trò chuyện bạn nhé!
                         </h3>
                         <div className="container">
                             <button
                                 onClick={() => setPage("home")}
                                 className="secondary"
                             >
-                                Cancel
+                                Hủy
                             </button>
-                            <button onClick={setupSources}>Start</button>
+                            <button onClick={setupSources}>Bắt Đầu</button>
                         </div>
                     </div>
                 </div>
