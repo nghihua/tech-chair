@@ -1,6 +1,6 @@
 import TechChairIcon from "../icons/logo192.png";
 
-const NavBar = () => {
+const NavBar = ({setPage}) => {
     return (
         <nav className="navbar">
             <img src={TechChairIcon} width="55px" className="logo"/>

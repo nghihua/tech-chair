@@ -5,7 +5,9 @@ function Menu({ description, setDescription, joinCode, setJoinCode, setPage }) {
     return (
         <div className="home">
             <div className="top">
-                <NavBar />
+                <NavBar 
+                    setPage={setPage}
+                />
             </div>
             <div className="bottom">
                 <div className="create box">
