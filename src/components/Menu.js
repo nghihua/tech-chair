@@ -11,22 +11,17 @@ function Menu({ description, setDescription, joinCode, setJoinCode, setPage }) {
             </div>
             <div className="bottom">
                 <div className="create box">
-                <h3>Bạn gặp vấn đề gì?</h3>
+                    <h3>Bạn gặp vấn đề gì?</h3>
                     <input
                         value={description}
                         onChange={(e) => setDescription(e.target.value)}
                         placeholder="Miêu tả vấn đề"
                     />
-                    <button onClick={() => setPage("create")}>Gọi</button>
+                    <button onClick={() => setPage("create")}>Gọi hỗ trợ</button>
                 </div>
 
                 <div className="answer box">
-                    <input
-                        value={joinCode}
-                        onChange={(e) => setJoinCode(e.target.value)}
-                        placeholder="Join with code"
-                    />
-                    <button onClick={() => {setPage("checking")}}>Answer</button>
+                    <button onClick={() => {setPage("volunteer")}}>Tôi muốn hỗ trợ</button>
                 </div>
             </div>
             
