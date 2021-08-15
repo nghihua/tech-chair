@@ -15,6 +15,9 @@ Tech Chair là nơi cung cấp tech support miễn phí cho mọi người, đ�
 
 ## Hướng dẫn setup và chạy dự án local
 
+Copy và paste đoạn script bên dưới vào Terminal.
+Nhấn Enter
+
 ```
  git clone https://github.com/nghihua/tech-chair.git
  cd tech-chair
